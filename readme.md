@@ -25,7 +25,7 @@ This project introduces a novel Teacher-Student Framework to solve this:
 graph LR
     A[Raw Noisy Data] -->|Sentence Embedding| B[MPNet-Base]
     B --> C[LR Teacher Model]
-    C -->|Filter: Score > 0.75 or < 0.4| D[Cleaned Data]
+    C -->|Filter: Score > 0.7 or < 0.4| D[Cleaned Data]
     D -->|Fine-tuning| E[RoBERTa Student]
     E -->|Detection| F{Is Spoiler?}
     F -->|Yes| G[Qwen LLM Despoiler]
@@ -160,4 +160,5 @@ Jun Su — [sujun@umich.edu](mailto:sujun@umich.edu)
 ```
 
 ```
+
 
