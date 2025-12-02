@@ -1,6 +1,6 @@
 
 
-````markdown
+
 # SpoilerTerminator
 
 Automatic Spoiler Detection and Spoiler-Free Rewriting via Embedding-Based Weak Supervision
@@ -31,6 +31,7 @@ graph LR
     F -->|Yes| G[Qwen LLM Despoiler]
     F -->|No| H[Keep Original]
     G --> I[Safe Teaser]
+
 ````
 
 ## Repository Structure
@@ -159,3 +160,4 @@ Jun Su — [sujun@umich.edu](mailto:sujun@umich.edu)
 ```
 
 ```
+
