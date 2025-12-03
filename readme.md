@@ -38,6 +38,7 @@ graph LR
 
 ```
 SpoilerTerminator/
+├── make_test_data.py        # Step 0: Create test data (JSON) and save it to reviews.txt
 ├── train_vector.py          # Step 1: Train the LR Teacher using MPNet embeddings
 ├── eval_vector.py           # Step 1.5: Evaluate the Teacher's direction finding
 ├── run_self_train.py        # Step 2: Teacher cleans data -> Trains RoBERTa Student
@@ -121,8 +122,8 @@ Our Teacher-Student approach significantly outperformed baselines and corrected 
 
 | Model            | F1 Score | Recall | Precision | Note                |
 | ---------------- | -------- | ------ | --------- | ------------------- |
-| Baseline (Naive) | 0.26     | Low    | Low       | Overfitted to noise |
-| RoBERTa (Ours)   | 0.49     | 0.69   | 0.40      | Corrects noise      |
+| Baseline (Naive) | 0.34     | 0.23   | 0.63      | Overfitted to noise |
+| RoBERTa (Ours)   | 0.42     | 0.36   | 0.49      | Corrects noise      |
 
 Example correction:
 
@@ -142,6 +143,7 @@ Example correction:
 | "Bruce Willis is actually a ghost in the end." | "There is a major revelation about Bruce Willis's true nature." |
 | "She dies in the car accident."                | "A severe car accident leaves one character's fate uncertain."  |
 
+Sample despoiled outputs can be found in despoiler.out.
 ## Citation
 
 ```
@@ -160,5 +162,6 @@ Jun Su — [sujun@umich.edu](mailto:sujun@umich.edu)
 ```
 
 ```
+
 
 
